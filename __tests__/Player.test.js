@@ -67,7 +67,7 @@ test("get the player's attack value", ()=>{
 
     expect(player.getAttackValue()).toBeGreaterThanOrEqual(5);
     expect(player.getAttackValue()).toBeLessThanOrEqual(15);
-})
+});
 
 test("add a potion to the player's inventory", ()=>{
     const player = new Player;
@@ -76,7 +76,7 @@ test("add a potion to the player's inventory", ()=>{
     player.addPotion(new Potion);
 
     expect(player.inventory.length).toBe(oldCount + 1);
-})
+});
 
 test("uses a potion from inventory", ()=>{
     const player = new Player;
@@ -86,4 +86,4 @@ test("uses a potion from inventory", ()=>{
     player.usePotion(1);
 
     expect(player.inventory.length).toBe(oldCount - 1);
-})
+});
